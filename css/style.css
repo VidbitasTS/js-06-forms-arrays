@@ -22,4 +22,8 @@
     /* border: 1px solid green; */
 }
 
+input:checked~label {
+    color: red
+}
+
 female=male=

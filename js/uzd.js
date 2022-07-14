@@ -12,6 +12,7 @@ function handleForm(event) {
 
     // spalvu'os apibrezimas
     const colorEl = document.querySelectorAll(".spalva")
+        //    const colorEl = document.querySelectorAll("input:checked")
     let color = ''
     colorEl.forEach(function(e) {
         color += e.checked ? `${e.value} ` : '';
