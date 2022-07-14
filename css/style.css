@@ -1,1 +1,17 @@
-@import 'reset.css'
+@import 'reset.css';
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px
+}
+
+.left,
+.right {
+    width: 100%;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.right {
+    border: 1px solid green;
+}

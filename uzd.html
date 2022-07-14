@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/uzd.js" defer></script>
+</head>
+
+<body>
+    <h1>Lets Form uzduotis</h1>
+    <div class="container">
+        <div id="left">
+            <form id="formId" action="https://formspree.io/f/mayvkkln" method="POST">
+                <label for="">El. pastas</label><br />
+                <input id="email" name="email" type="email" />
+                <br />
+                <label for="">Slaptazodis</label><br />
+                <input id="pass" name="passw" type="password" />
+                <br /><br />
+
+                <input type="radio" id="vyras" name="gender" value="Vyras" checked />
+                <label for="gender">Vyras</label>
+                <input type="radio" id="moteris" name="gender" value="Moteris" />
+                <label for="gender">Moteris</label><br />
+                <br />
+
+                <fieldset id="colorValue">
+                    <legend>Megstama spalva</legend>
+                    <input type="checkbox" class="spalva" id="raudona" name="spalva" value="Raudona" />
+                    <label for="spalva">Raudona</label><br />
+                    <input type="checkbox" class="spalva" id="zalia" name="spalva" value="Zalia" />
+                    <label for="spalva">Zalia</label><br />
+                    <input type="checkbox" class="spalva" id="melyna" name="spalva" value="Melyna" />
+                    <label for="spalva">Melyna</label>
+                </fieldset>
+                <br />
+                <br />
+
+                <label for="miestas">Miestas:</label>
+                <select id="miestas" name="miestas">
+                    <option value="Vilnius">Vilnius</option>
+                    <option value="Kaunas">Kaunas</option>
+                    <option value="Kupiskis">Kupiskis</option>
+                </select>
+
+                <br /><br />
+                <button type="submit">Siusti</button>
+            </form>
+        </div>
+        <div id="right" class="right"></div>
+    </div>
+</body>
+
+</html>
