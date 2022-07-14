@@ -1,35 +1,42 @@
 'use strict'
-
+// nusitaikymas i forma
 const formEl = document.getElementById('formId')
+
+// sukuriamas pasiklausymas submit buttonui
 formEl.addEventListener('submit', handleForm)
 
+// submit buttono funkcija
 function handleForm(event) {
+    //perimamas formos valdymas ir sustabdomas issiuntimas
     event.preventDefault()
-        //    console.log(event)
-        // const r = document.getElementById("raudona").checked ? document.getElementById("raudona").value : ''
-        // const g = document.getElementById("zalia").checked ? document.getElementById("zalia").value : ''
-        // const b = document.getElementById("melyna").checked ? document.getElementById("melyna").value : ''
-        //console.log(`${r} ${g} ${b}`)
 
+    // spalvu'os apibrezimas
     const colorEl = document.querySelectorAll(".spalva")
     let color = ''
     colorEl.forEach(function(e) {
         color += e.checked ? `${e.value} ` : '';
     });
 
+    // lyties apibrezimas
     const lytis = document.getElementsByName("gender");
+
+    // objekto kurimas is formos duomenu 
     const formData = {
         email: event.target.children.email.value,
         password: event.target.children.pass.value,
-        //gender: document.getElementById("vyras").checked ? 'vyras' : 'moteris',
         gender: lytis[0].checked ? lytis[0].value : lytis[1].value,
         color: color,
         town: event.target.children.miestas.value
     }
+
+    // kreipimasis i funkcija del objekto isvedimo i html'a ir i concol.log
     formDataToHtml(formData)
+
+    //formos refreshas
     formEl.reset()
 }
 
+// objekto duomenu isvedimas i html'a 
 function formDataToHtml(objData) {
     const fCard = document.getElementById('right')
     const pEl = document.createElement('p')
